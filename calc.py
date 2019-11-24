@@ -20,10 +20,13 @@ def g(x):
 
 # Usage: python calc.py <x1> <y1> <x2> <y2>
 # Return: c(x1, y1) / c(x2, y2)
+#
+# Example: python calc.py 2 1 5 1
+# Return: c(2,1) / c(5,1) = 2 / 5 = 0.4
 if __name__ == '__main__':
   assert len(sys.argv) == 5
   m = c(g(1), g(2))
   n = c(g(3), g(4))
 
-  print("Possibility: ", m / n)
-  print("One minus Possibility: ", 1 - m / n)
+  print("Possibility of this event: ", m / n)
+  print("Possibility of opposite event: ", 1 - m / n)
